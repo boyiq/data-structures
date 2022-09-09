@@ -27,7 +27,6 @@ stackMethods.push = function(value) {
     this.top++;
     this.data[this.top] = value;
   }
-
 };
 
 stackMethods.pop = function() {
@@ -47,9 +46,3 @@ stackMethods.size = function() {
     return this.top + 1;
   }
 };
-
-var stack = Stack();
-stack.push('a');
-stack.push('b');
-stack.pop();
-stack.size();
