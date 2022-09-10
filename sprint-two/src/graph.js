@@ -48,17 +48,12 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
 
 // Pass in a callback which will be executed on each node of the graph.
 Graph.prototype.forEachNode = function(cb) {
+  for (let key in this.connections) {
+    cb(key);
+  }
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-let graph = new Graph();
-graph.addNode(4);
-graph.addNode(5);
-graph.addNode(6);
-graph.addEdge(5, 4);
-graph.addEdge(6, 4);
-graph.addEdge(6, 5);
-graph.removeEdge(5, 4);
 
